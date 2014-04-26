@@ -2013,6 +2013,20 @@ AskAboutIgnoredPlugins=0
 </code></pre>
 
   <tr>
+    <th>Producefile
+    <td class="produce">
+<pre><code># Link
+[%{name}]
+dep.o = %{name}.o
+recipe = cc -o %{target} %{o}
+
+# Compile
+[out/%{name}.o]
+dep.c = %{name}.c
+recipe = cc -c %{c}
+</code></pre>
+
+  <tr>
     <th>Apache
     <td class="apache">
 <pre><code># rewrite`s rules for wordpress pretty url
